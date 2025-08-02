@@ -1,11 +1,11 @@
-# Contributing to CryptoMerkle Pro Enterprise
+# Contributing to Cryptocurrency Parallel Tree Optimization
 
-Thank you for your interest in contributing to CryptoMerkle Pro! This document provides guidelines and information for contributors.
+Thank you for your interest in contributing to this cryptocurrency parallel Merkle tree optimization project! This document provides guidelines and information for contributors.
 
 ## 🚀 Quick Start
 
 1. Fork the repository
-2. Clone your fork: `git clone https://github.com/yourusername/cryptomerkle-pro.git`
+2. Clone your fork: `git clone https://github.com/yourusername/cryptocurrency-parallel-tree-optimization.git`
 3. Install dependencies: `npm install`
 4. Set up environment: `cp .env.example .env`
 5. Start development: `npm run dev`
@@ -19,7 +19,7 @@ Thank you for your interest in contributing to CryptoMerkle Pro! This document p
 
 ### Environment Configuration
 ```env
-DATABASE_URL=postgresql://user:password@localhost:5432/cryptomerkle
+DATABASE_URL=postgresql://user:password@localhost:5432/cryptocurrency_optimization
 NODE_ENV=development
 PORT=5000
 ```
@@ -212,7 +212,7 @@ We are committed to providing a welcoming and inclusive environment. Please be r
 
 ## 📄 License
 
-By contributing to CryptoMerkle Pro, you agree that your contributions will be licensed under the MIT License.
+By contributing to this cryptocurrency parallel tree optimization project, you agree that your contributions will be licensed under the MIT License.
 
 ## 🙏 Recognition
 
@@ -222,4 +222,4 @@ Contributors will be recognized in:
 - Project documentation
 - Community showcases
 
-Thank you for contributing to CryptoMerkle Pro Enterprise! 🚀
+Thank you for contributing to the cryptocurrency parallel tree optimization project!

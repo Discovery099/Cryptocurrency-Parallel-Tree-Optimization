@@ -1,6 +1,6 @@
-# 🚀 Deployment Guide for CryptoMerkle Pro Enterprise
+# 🚀 Deployment Guide for Cryptocurrency Parallel Tree Optimization
 
-This guide will help you deploy the CryptoMerkle Pro cryptocurrency mining optimization platform to GitHub and various hosting platforms.
+This guide will help you deploy the cryptocurrency parallel Merkle tree optimization platform to GitHub and various hosting platforms.
 
 ## 📋 Prerequisites
 
@@ -17,8 +17,8 @@ This guide will help you deploy the CryptoMerkle Pro cryptocurrency mining optim
 2. Click the "+" icon → "New repository"
 3. Configure repository:
    ```
-   Repository name: cryptomerkle-pro-enterprise
-   Description: Advanced cryptocurrency mining operations dashboard with AI/ML optimization, quantum-resistant security, and distributed cluster management
+   Repository name: cryptocurrency-parallel-tree-optimization
+   Description: Cryptocurrency parallel Merkle tree optimization with GPU acceleration, ML optimization, and quantum-resistant algorithms
    Visibility: Public (recommended for portfolio visibility)
    Initialize: Don't check any boxes (we have existing code)
    ```
@@ -40,7 +40,7 @@ git add .
 git commit -m "Initial commit: CryptoMerkle Pro Enterprise v1.0.0"
 
 # Add GitHub remote (replace YOUR_USERNAME with your GitHub username)
-git remote add origin https://github.com/YOUR_USERNAME/cryptomerkle-pro-enterprise.git
+git remote add origin https://github.com/YOUR_USERNAME/cryptocurrency-parallel-tree-optimization.git
 
 # Push to GitHub
 git push -u origin main

@@ -1,6 +1,6 @@
 ---
 name: Bug Report
-about: Create a report to help improve CryptoMerkle Pro
+about: Create a report to help improve cryptocurrency parallel tree optimization
 title: '[BUG] '
 labels: bug
 assignees: ''

@@ -1,6 +1,6 @@
 ---
 name: Feature Request
-about: Suggest an idea for CryptoMerkle Pro
+about: Suggest an idea for cryptocurrency parallel tree optimization
 title: '[FEATURE] '
 labels: enhancement
 assignees: ''

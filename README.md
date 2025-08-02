@@ -1,5 +1,5 @@
-# 🚀 CryptoMerkle Pro Enterprise
-## Advanced Cryptocurrency Mining Operations Dashboard
+# 🚀 Cryptocurrency Parallel Tree Optimization
+## Advanced Mining Operations with GPU Acceleration & AI/ML
 
 A production-ready cryptocurrency mining optimization platform featuring **Adaptive Parallel Merkle Tree Construction** with machine learning-based optimization, quantum-resistant cryptography, and distributed cluster management.
 
@@ -132,8 +132,8 @@ A production-ready cryptocurrency mining optimization platform featuring **Adapt
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/cryptomerkle-pro.git
-cd cryptomerkle-pro
+git clone https://github.com/yourusername/cryptocurrency-parallel-tree-optimization.git
+cd cryptocurrency-parallel-tree-optimization
 
 # Install dependencies
 npm install
