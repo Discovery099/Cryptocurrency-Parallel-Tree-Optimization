@@ -36,10 +36,10 @@ export default function Header() {
       <div className="flex items-center justify-between">
         <div>
           <h2 className="text-2xl font-bold text-white" data-testid="page-title">
-            Mining Operations Dashboard
+            Parallel Tree Optimization
           </h2>
           <p className="text-slate-400" data-testid="page-description">
-            Real-time Merkle tree optimization and mining pool management
+            Real-time parallel Merkle tree construction with GPU acceleration
           </p>
         </div>
         

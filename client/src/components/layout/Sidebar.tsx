@@ -74,8 +74,8 @@ export default function Sidebar() {
             <Zap className="text-white text-lg" />
           </div>
           <div>
-            <h1 className="text-xl font-bold text-white" data-testid="app-title">CryptoMerkle</h1>
-            <p className="text-slate-400 text-sm" data-testid="app-subtitle">Pro Enterprise</p>
+            <h1 className="text-xl font-bold text-white" data-testid="app-title">CryptoTree</h1>
+            <p className="text-slate-400 text-sm" data-testid="app-subtitle">Parallel Optimization</p>
           </div>
         </div>
       </div>

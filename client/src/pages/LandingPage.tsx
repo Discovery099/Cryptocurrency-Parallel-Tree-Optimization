@@ -306,8 +306,8 @@ export default function LandingPage() {
             Ready to Optimize Your Mining Operations?
           </h2>
           <p className="text-xl text-slate-300 mb-8">
-            Join thousands of miners using CryptoMerkle Pro to maximize their profitability 
-            with AI-powered optimization and enterprise-grade security.
+            Join thousands of miners using parallel tree optimization to maximize their profitability 
+            with AI-powered algorithms and enterprise-grade security.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link href="/dashboard">
@@ -334,13 +334,13 @@ export default function LandingPage() {
                   <Zap className="text-white text-lg" />
                 </div>
                 <div>
-                  <h1 className="text-xl font-bold text-white">CryptoMerkle</h1>
-                  <p className="text-emerald-400 text-sm">Pro Enterprise</p>
+                  <h1 className="text-xl font-bold text-white">CryptoTree</h1>
+                  <p className="text-emerald-400 text-sm">Parallel Optimization</p>
                 </div>
               </div>
               <p className="text-slate-400 max-w-md">
-                Advanced cryptocurrency mining optimization platform with AI/ML algorithms, 
-                quantum-resistant security, and distributed cluster management.
+                Advanced mining operations with GPU acceleration, ML optimization, and 
+                quantum-resistant algorithms for parallel Merkle tree construction.
               </p>
             </div>
             <div>
@@ -363,7 +363,7 @@ export default function LandingPage() {
             </div>
           </div>
           <div className="border-t border-slate-700/50 pt-8 mt-8 text-center text-slate-400">
-            <p>&copy; 2025 CryptoMerkle Pro Enterprise. Built for the blockchain community.</p>
+            <p>&copy; 2025 Cryptocurrency Parallel Tree Optimization. Built for the blockchain community.</p>
           </div>
         </div>
       </footer>
