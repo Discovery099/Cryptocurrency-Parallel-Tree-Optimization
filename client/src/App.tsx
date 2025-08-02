@@ -11,6 +11,7 @@ import MiningPools from "@/pages/MiningPools";
 import Analytics from "@/pages/Analytics";
 import Configuration from "@/pages/Configuration";
 import Security from "@/pages/Security";
+import AIOptimizations from "@/pages/AIOptimizations";
 import Sidebar from "@/components/layout/Sidebar";
 import Header from "@/components/layout/Header";
 import { WebSocketProvider } from "@/lib/websocket";
@@ -23,6 +24,7 @@ function Router() {
       <Route path="/gpu-management" component={GPUManagement} />
       <Route path="/mining-pools" component={MiningPools} />
       <Route path="/analytics" component={Analytics} />
+      <Route path="/ai-optimizations" component={AIOptimizations} />
       <Route path="/configuration" component={Configuration} />
       <Route path="/security" component={Security} />
       <Route component={NotFound} />

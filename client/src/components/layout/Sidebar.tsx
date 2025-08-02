@@ -8,7 +8,8 @@ import {
   BarChart3,
   Settings,
   Shield,
-  Zap
+  Zap,
+  Brain
 } from "lucide-react";
 
 const navigation = [
@@ -40,6 +41,12 @@ const navigation = [
     name: 'Analytics',
     href: '/analytics',
     icon: BarChart3,
+    current: false,
+  },
+  {
+    name: 'AI Optimizations',
+    href: '/ai-optimizations',
+    icon: Brain,
     current: false,
   },
   {

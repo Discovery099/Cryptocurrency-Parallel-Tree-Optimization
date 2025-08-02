@@ -9,6 +9,10 @@ import { miningPoolService } from "./services/miningPoolService";
 import { analyticsService } from "./services/analyticsService";
 import { alertService } from "./services/alertService";
 import { configService } from "./services/configService";
+import { adaptiveOptimizer } from "./services/adaptiveOptimizer";
+import { quantumResistantCrypto } from "./services/quantumResistantCrypto";
+import { clusterManager } from "./services/clusterManager";
+import { miningPoolIntegration } from "./services/miningPoolIntegration";
 import { validateRequest } from "./middleware/validation";
 import { 
   insertGPUSchema, insertMiningPoolSchema, insertMerkleTreeConfigSchema,
@@ -53,12 +57,22 @@ export async function registerRoutes(app: Express): Promise<Server> {
   miningEngine.setBroadcast(broadcast);
   gpuManager.setBroadcast(broadcast);
   alertService.setBroadcast(broadcast);
+  adaptiveOptimizer.setBroadcast(broadcast);
+  quantumResistantCrypto.setBroadcast(broadcast);
+  clusterManager.setBroadcast(broadcast);
+  miningPoolIntegration.setBroadcast(broadcast);
 
   // Start background services
   await miningEngine.initialize();
   await gpuManager.initialize();
   await miningPoolService.initialize();
   await analyticsService.initialize();
+  
+  // Initialize advanced services
+  await adaptiveOptimizer.initialize();
+  await quantumResistantCrypto.initialize();
+  await clusterManager.initialize();
+  await miningPoolIntegration.initialize();
 
   // API Routes
 
@@ -364,6 +378,66 @@ export async function registerRoutes(app: Express): Promise<Server> {
       logger.error('Error fetching system status:', error);
       res.status(500).json({ error: 'Failed to fetch system status' });
     }
+  });
+
+  // AI/ML Optimization endpoints
+  app.get('/api/ai/optimization-status', async (req, res) => {
+    try {
+      const status = await adaptiveOptimizer.getOptimizationStatus();
+      res.json(status);
+    } catch (error) {
+      logger.error('Error fetching optimization status:', error);
+      res.status(500).json({ error: 'Failed to fetch optimization status' });
+    }
+  });
+
+  app.get('/api/ai/performance-prediction/:hours', async (req, res) => {
+    try {
+      const hours = parseInt(req.params.hours);
+      const prediction = await adaptiveOptimizer.getPerformancePrediction(hours);
+      res.json(prediction);
+    } catch (error) {
+      logger.error('Error fetching performance prediction:', error);
+      res.status(500).json({ error: 'Failed to fetch performance prediction' });
+    }
+  });
+
+  // Quantum Security endpoints
+  app.get('/api/quantum/security-assessment', async (req, res) => {
+    try {
+      const assessment = await quantumResistantCrypto.generateSecurityAssessment();
+      res.json(assessment);
+    } catch (error) {
+      logger.error('Error generating security assessment:', error);
+      res.status(500).json({ error: 'Failed to generate security assessment' });
+    }
+  });
+
+  // Cluster Management endpoints
+  app.get('/api/cluster/status', async (req, res) => {
+    try {
+      const status = await clusterManager.getClusterStatus();
+      res.json(status);
+    } catch (error) {
+      logger.error('Error fetching cluster status:', error);
+      res.status(500).json({ error: 'Failed to fetch cluster status' });
+    }
+  });
+
+  // Mining Pool Integration endpoints
+  app.get('/api/pools/integration-status', async (req, res) => {
+    try {
+      const status = await miningPoolIntegration.getIntegrationStatus();
+      res.json(status);
+    } catch (error) {
+      logger.error('Error fetching pool integration status:', error);
+      res.status(500).json({ error: 'Failed to fetch pool integration status' });
+    }
+  });
+
+  const port = Number(process.env.PORT) || 5000;
+  httpServer.listen(port, '0.0.0.0', () => {
+    logger.info(`serving on port ${port}`);
   });
 
   return httpServer;

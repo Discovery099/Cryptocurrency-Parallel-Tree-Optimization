@@ -108,7 +108,7 @@ export class DatabaseStorage implements IStorage {
 
   async deleteGPU(id: string): Promise<boolean> {
     const result = await db.delete(gpus).where(eq(gpus.id, id));
-    return result.rowCount > 0;
+    return (result.rowCount || 0) > 0;
   }
 
   // Mining Pool operations
@@ -136,7 +136,7 @@ export class DatabaseStorage implements IStorage {
 
   async deleteMiningPool(id: string): Promise<boolean> {
     const result = await db.delete(miningPools).where(eq(miningPools.id, id));
-    return result.rowCount > 0;
+    return (result.rowCount || 0) > 0;
   }
 
   async setActiveMiningPool(id: string): Promise<boolean> {
@@ -236,7 +236,7 @@ export class DatabaseStorage implements IStorage {
 
   async clearAllAlerts(): Promise<boolean> {
     const result = await db.update(alerts).set({ isRead: true });
-    return result.rowCount > 0;
+    return (result.rowCount || 0) > 0;
   }
 
   // Transaction Batch operations

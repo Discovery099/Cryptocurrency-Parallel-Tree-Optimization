@@ -221,7 +221,13 @@ class MiningEngine {
       gpuIds: activeGPUs.slice(0, Math.ceil(activeGPUs.length * 0.7)).map(gpu => gpu.id), // Use 70% of GPUs
     };
 
-    await storage.createTransactionBatch(batch);
+    try {
+      await storage.createTransactionBatch(batch);
+    } catch (error) {
+      // Transaction batch creation failed - log for debugging but don't crash
+      logger.error('Failed to store transaction batch:', error);
+      return;
+    }
 
     // Broadcast processing update
     if (this.broadcast) {
