@@ -1,0 +1,329 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(210, 40%, 98%);
+  --foreground: hsl(222.2, 84%, 4.9%);
+  --muted: hsl(210, 40%, 96%);
+  --muted-foreground: hsl(215.4, 16.3%, 46.9%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(222.2, 84%, 4.9%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(222.2, 84%, 4.9%);
+  --border: hsl(214.3, 31.8%, 91.4%);
+  --input: hsl(214.3, 31.8%, 91.4%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(210, 40%, 98%);
+  --secondary: hsl(210, 40%, 96%);
+  --secondary-foreground: hsl(222.2, 84%, 4.9%);
+  --accent: hsl(210, 40%, 96%);
+  --accent-foreground: hsl(222.2, 84%, 4.9%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(210, 40%, 98%);
+  --ring: hsl(222.2, 84%, 4.9%);
+  --radius: 0.5rem;
+  
+  /* Custom crypto theme colors */
+  --crypto-900: hsl(217, 33%, 10%);
+  --crypto-800: hsl(215, 28%, 17%);
+  --crypto-700: hsl(215, 20%, 27%);
+  --crypto-600: hsl(215, 16%, 39%);
+  --crypto-500: hsl(215, 14%, 53%);
+  --crypto-400: hsl(217, 19%, 60%);
+  --crypto-300: hsl(218, 20%, 71%);
+  --crypto-200: hsl(220, 23%, 85%);
+  --crypto-100: hsl(220, 43%, 94%);
+  --crypto-50: hsl(210, 40%, 98%);
+  
+  /* Emerald colors for success states */
+  --emerald-500: hsl(160, 84%, 39%);
+  --emerald-400: hsl(158, 64%, 52%);
+  --emerald-600: hsl(161, 94%, 30%);
+  
+  /* Amber colors for warnings */
+  --amber-500: hsl(43, 96%, 56%);
+  --amber-400: hsl(43, 96%, 65%);
+  --amber-600: hsl(32, 95%, 44%);
+  
+  /* Red colors for errors */
+  --red-500: hsl(0, 84%, 60%);
+  --red-400: hsl(0, 91%, 71%);
+  --red-600: hsl(0, 84%, 50%);
+  
+  /* Blue colors for info */
+  --blue-500: hsl(221, 83%, 53%);
+  --blue-400: hsl(221, 91%, 62%);
+  --blue-600: hsl(221, 83%, 43%);
+}
+
+.dark {
+  --background: hsl(217, 33%, 10%);
+  --foreground: hsl(210, 40%, 98%);
+  --muted: hsl(215, 28%, 17%);
+  --muted-foreground: hsl(217, 19%, 60%);
+  --popover: hsl(217, 33%, 10%);
+  --popover-foreground: hsl(210, 40%, 98%);
+  --card: hsl(215, 28%, 17%);
+  --card-foreground: hsl(210, 40%, 98%);
+  --border: hsl(215, 20%, 27%);
+  --input: hsl(215, 20%, 27%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(210, 40%, 98%);
+  --secondary: hsl(215, 28%, 17%);
+  --secondary-foreground: hsl(210, 40%, 98%);
+  --accent: hsl(215, 28%, 17%);
+  --accent-foreground: hsl(210, 40%, 98%);
+  --destructive: hsl(0, 84%, 50%);
+  --destructive-foreground: hsl(210, 40%, 98%);
+  --ring: hsl(212, 26%, 83%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+
+  /* Custom scrollbar styles */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-slate-900;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-slate-700 rounded-md;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-slate-600;
+  }
+
+  /* Animation for status indicators */
+  .animate-pulse-slow {
+    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  /* Chart container styles */
+  .chart-container {
+    @apply w-full h-full;
+  }
+
+  .chart-container canvas {
+    @apply w-full h-full;
+  }
+
+  /* Metric card hover effects */
+  .metric-card {
+    @apply transition-all duration-200 hover:scale-105 hover:shadow-lg;
+  }
+
+  /* Status indicator styles */
+  .status-online {
+    @apply bg-emerald-500;
+  }
+
+  .status-warning {
+    @apply bg-amber-500;
+  }
+
+  .status-error {
+    @apply bg-red-500;
+  }
+
+  .status-offline {
+    @apply bg-slate-500;
+  }
+
+  /* Progress bar animations */
+  .progress-bar {
+    @apply transition-all duration-500 ease-out;
+  }
+
+  /* GPU card styles */
+  .gpu-card {
+    @apply bg-slate-800 border border-slate-700 rounded-lg p-4 transition-all duration-200;
+  }
+
+  .gpu-card:hover {
+    @apply border-slate-600 shadow-lg;
+  }
+
+  .gpu-card.status-warning {
+    @apply border-amber-500/20 bg-amber-500/5;
+  }
+
+  .gpu-card.status-error {
+    @apply border-red-500/20 bg-red-500/5;
+  }
+
+  /* Alert styles */
+  .alert-critical {
+    @apply border-red-500/20 bg-red-500/10;
+  }
+
+  .alert-high {
+    @apply border-amber-500/20 bg-amber-500/10;
+  }
+
+  .alert-medium {
+    @apply border-blue-500/20 bg-blue-500/10;
+  }
+
+  .alert-low {
+    @apply border-emerald-500/20 bg-emerald-500/10;
+  }
+
+  /* Mining pool status styles */
+  .pool-active {
+    @apply border-emerald-500/20 bg-emerald-500/10;
+  }
+
+  .pool-standby {
+    @apply border-slate-600 bg-slate-800;
+  }
+
+  .pool-disconnected {
+    @apply border-red-500/20 bg-red-500/5;
+  }
+
+  /* Configuration panel styles */
+  .config-section {
+    @apply space-y-4 p-4 bg-slate-800 rounded-lg border border-slate-700;
+  }
+
+  .config-toggle {
+    @apply relative inline-flex h-6 w-11 items-center rounded-full transition-colors;
+  }
+
+  .config-toggle-thumb {
+    @apply inline-block h-4 w-4 transform rounded-full bg-white transition-transform;
+  }
+
+  .config-toggle[data-state="checked"] .config-toggle-thumb {
+    @apply translate-x-6;
+  }
+
+  /* Sidebar navigation styles */
+  .nav-item {
+    @apply flex items-center space-x-3 px-3 py-2 rounded-lg transition-colors;
+  }
+
+  .nav-item:hover {
+    @apply bg-slate-700;
+  }
+
+  .nav-item.active {
+    @apply bg-emerald-500/10 text-emerald-400 border border-emerald-500/20;
+  }
+
+  /* Header styles */
+  .header-gradient {
+    background: linear-gradient(135deg, hsl(215, 28%, 17%) 0%, hsl(217, 33%, 10%) 100%);
+  }
+
+  /* Button variants */
+  .btn-optimize {
+    @apply bg-emerald-500 hover:bg-emerald-600 text-white font-medium transition-colors;
+  }
+
+  .btn-warning {
+    @apply bg-amber-500 hover:bg-amber-600 text-white font-medium transition-colors;
+  }
+
+  .btn-danger {
+    @apply bg-red-500 hover:bg-red-600 text-white font-medium transition-colors;
+  }
+
+  /* Data visualization styles */
+  .hash-rate-chart {
+    @apply w-full h-64;
+  }
+
+  .efficiency-meter {
+    @apply w-full h-2 bg-slate-700 rounded-full overflow-hidden;
+  }
+
+  .efficiency-bar {
+    @apply h-full transition-all duration-500 ease-out rounded-full;
+  }
+
+  .efficiency-excellent {
+    @apply bg-emerald-500;
+  }
+
+  .efficiency-good {
+    @apply bg-blue-500;
+  }
+
+  .efficiency-fair {
+    @apply bg-amber-500;
+  }
+
+  .efficiency-poor {
+    @apply bg-red-500;
+  }
+
+  /* Typography enhancements */
+  .text-crypto-primary {
+    @apply text-emerald-400;
+  }
+
+  .text-crypto-secondary {
+    @apply text-slate-400;
+  }
+
+  .text-crypto-accent {
+    @apply text-blue-400;
+  }
+
+  /* Loading states */
+  .loading-skeleton {
+    @apply animate-pulse bg-slate-700 rounded;
+  }
+
+  .loading-spinner {
+    @apply animate-spin rounded-full border-2 border-slate-700 border-t-emerald-500;
+  }
+
+  /* Responsive utilities */
+  @media (max-width: 768px) {
+    .mobile-hidden {
+      @apply hidden;
+    }
+    
+    .mobile-full {
+      @apply w-full;
+    }
+  }
+}
+
+/* Custom animations */
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* WebGL acceleration hint */
+.gpu-accelerated {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000;
+}
