@@ -62,7 +62,7 @@ const testimonials = [
     name: 'Alex Chen',
     role: 'Mining Operations Director',
     company: 'CryptoTech Solutions',
-    content: 'CryptoMerkle Pro transformed our mining efficiency. The AI optimization alone increased our hash rate by 32%.',
+    content: 'This parallel tree optimization platform transformed our mining efficiency. The AI optimization alone increased our hash rate by 32%.',
     avatar: 'AC'
   },
   {
@@ -95,8 +95,8 @@ export default function LandingPage() {
                 <Zap className="text-white text-lg" />
               </div>
               <div>
-                <h1 className="text-xl font-bold text-white">CryptoMerkle</h1>
-                <p className="text-emerald-400 text-sm">Pro Enterprise</p>
+                <h1 className="text-xl font-bold text-white">CryptoTree</h1>
+                <p className="text-emerald-400 text-sm">Parallel Optimization</p>
               </div>
             </div>
             <div className="flex items-center space-x-4">
@@ -124,14 +124,14 @@ export default function LandingPage() {
               Production Ready
             </Badge>
             <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
-              Advanced Cryptocurrency
+              Cryptocurrency Parallel
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">
-                Mining Operations
+                Tree Optimization
               </span>
             </h1>
             <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-              Enterprise-grade mining optimization platform featuring AI/ML algorithms, 
-              quantum-resistant security, and distributed cluster management for maximum profitability.
+              Advanced mining operations with GPU acceleration, ML optimization, and 
+              quantum-resistant algorithms for parallel Merkle tree construction.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12">
               <Link href="/dashboard">
