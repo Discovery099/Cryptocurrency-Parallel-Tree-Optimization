@@ -12,6 +12,7 @@ import Analytics from "@/pages/Analytics";
 import Configuration from "@/pages/Configuration";
 import Security from "@/pages/Security";
 import AIOptimizations from "@/pages/AIOptimizations";
+import LandingPage from "@/pages/LandingPage";
 import Sidebar from "@/components/layout/Sidebar";
 import Header from "@/components/layout/Header";
 import { WebSocketProvider } from "@/lib/websocket";
@@ -19,7 +20,9 @@ import { WebSocketProvider } from "@/lib/websocket";
 function Router() {
   return (
     <Switch>
+      <Route path="/landing" component={LandingPage} />
       <Route path="/" component={Dashboard} />
+      <Route path="/dashboard" component={Dashboard} />
       <Route path="/merkle-trees" component={MerkleTrees} />
       <Route path="/gpu-management" component={GPUManagement} />
       <Route path="/mining-pools" component={MiningPools} />
