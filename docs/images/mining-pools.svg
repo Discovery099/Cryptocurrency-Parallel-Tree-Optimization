@@ -1,0 +1,80 @@
+<svg width="800" height="450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0F172A"/>
+      <stop offset="100%" style="stop-color:#1E293B"/>
+    </linearGradient>
+  </defs>
+  
+  <rect width="800" height="450" fill="url(#bg3)"/>
+  
+  <!-- Header -->
+  <rect x="0" y="0" width="800" height="50" fill="#1F2937"/>
+  <text x="20" y="30" fill="white" font-family="Arial, sans-serif" font-size="16" font-weight="bold">⛏️ Mining Pool Management</text>
+  <text x="650" y="30" fill="#10B981" font-family="Arial, sans-serif" font-size="12">14/17 Connected</text>
+  
+  <!-- Primary Pool -->
+  <rect x="20" y="70" width="760" height="60" rx="8" fill="#374151"/>
+  <circle cx="40" cy="100" r="8" fill="#10B981"/>
+  <text x="60" y="90" fill="white" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Binance Pool</text>
+  <text x="60" y="105" fill="#9CA3AF" font-family="Arial, sans-serif" font-size="12">stratum+tcp://stratum.binance.pool.com:8888</text>
+  <text x="60" y="120" fill="#10B981" font-family="Arial, sans-serif" font-size="12">PRIMARY • 176ms latency • 0 workers</text>
+  
+  <rect x="600" y="85" width="80" height="30" rx="4" fill="#10B981"/>
+  <text x="625" y="105" fill="white" font-family="Arial, sans-serif" font-size="12">ACTIVE</text>
+  
+  <!-- Pool Grid -->
+  <rect x="20" y="150" width="240" height="80" rx="8" fill="#374151"/>
+  <circle cx="35" cy="170" r="6" fill="#10B981"/>
+  <text x="50" y="175" fill="white" font-family="Arial, sans-serif" font-size="12" font-weight="bold">F2Pool</text>
+  <text x="50" y="190" fill="#9CA3AF" font-family="Arial, sans-serif" font-size="10">154ms • Connected</text>
+  <text x="50" y="205" fill="#10B981" font-family="Arial, sans-serif" font-size="10">12 workers</text>
+  
+  <rect x="280" y="150" width="240" height="80" rx="8" fill="#374151"/>
+  <circle cx="295" cy="170" r="6" fill="#10B981"/>
+  <text x="310" y="175" fill="white" font-family="Arial, sans-serif" font-size="12" font-weight="bold">AntPool</text>
+  <text x="310" y="190" fill="#9CA3AF" font-family="Arial, sans-serif" font-size="10">142ms • Connected</text>
+  <text x="310" y="205" fill="#10B981" font-family="Arial, sans-serif" font-size="10">8 workers</text>
+  
+  <rect x="540" y="150" width="240" height="80" rx="8" fill="#374151"/>
+  <circle cx="555" cy="170" r="6" fill="#10B981"/>
+  <text x="570" y="175" fill="white" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Poolin</text>
+  <text x="570" y="190" fill="#9CA3AF" font-family="Arial, sans-serif" font-size="10">198ms • Connected</text>
+  <text x="570" y="205" fill="#10B981" font-family="Arial, sans-serif" font-size="10">6 workers</text>
+  
+  <rect x="20" y="250" width="240" height="80" rx="8" fill="#374151"/>
+  <circle cx="35" cy="270" r="6" fill="#EF4444"/>
+  <text x="50" y="275" fill="white" font-family="Arial, sans-serif" font-size="12" font-weight="bold">SlushPool</text>
+  <text x="50" y="290" fill="#9CA3AF" font-family="Arial, sans-serif" font-size="10">Timeout • Reconnecting</text>
+  <text x="50" y="305" fill="#EF4444" font-family="Arial, sans-serif" font-size="10">Offline</text>
+  
+  <rect x="280" y="250" width="240" height="80" rx="8" fill="#374151"/>
+  <circle cx="295" cy="270" r="6" fill="#F59E0B"/>
+  <text x="310" y="275" fill="white" font-family="Arial, sans-serif" font-size="12" font-weight="bold">ViaBTC</text>
+  <text x="310" y="290" fill="#9CA3AF" font-family="Arial, sans-serif" font-size="10">256ms • Slow</text>
+  <text x="310" y="305" fill="#F59E0B" font-family="Arial, sans-serif" font-size="10">Warning</text>
+  
+  <rect x="540" y="250" width="240" height="80" rx="8" fill="#374151"/>
+  <text x="555" y="275" fill="#9CA3AF" font-family="Arial, sans-serif" font-size="12">+11 More Pools</text>
+  <text x="555" y="290" fill="#9CA3AF" font-family="Arial, sans-serif" font-size="10">Auto-failover enabled</text>
+  <text x="555" y="305" fill="#10B981" font-family="Arial, sans-serif" font-size="10">Standby ready</text>
+  
+  <!-- Statistics -->
+  <rect x="20" y="350" width="760" height="80" rx="8" fill="#374151"/>
+  <text x="30" y="375" fill="white" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Pool Statistics</text>
+  
+  <text x="30" y="395" fill="#9CA3AF" font-family="Arial, sans-serif" font-size="12">Average Latency:</text>
+  <text x="150" y="395" fill="white" font-family="Arial, sans-serif" font-size="12">124ms</text>
+  
+  <text x="250" y="395" fill="#9CA3AF" font-family="Arial, sans-serif" font-size="12">Active Workers:</text>
+  <text x="350" y="395" fill="white" font-family="Arial, sans-serif" font-size="12">72 distributed</text>
+  
+  <text x="500" y="395" fill="#9CA3AF" font-family="Arial, sans-serif" font-size="12">Failover Events:</text>
+  <text x="600" y="395" fill="white" font-family="Arial, sans-serif" font-size="12">3 today</text>
+  
+  <text x="30" y="415" fill="#9CA3AF" font-family="Arial, sans-serif" font-size="12">Pool Switching:</text>
+  <text x="150" y="415" fill="#10B981" font-family="Arial, sans-serif" font-size="12">Automatic</text>
+  
+  <text x="250" y="415" fill="#9CA3AF" font-family="Arial, sans-serif" font-size="12">Connection Health:</text>
+  <text x="350" y="415" fill="#10B981" font-family="Arial, sans-serif" font-size="12">Excellent</text>
+</svg>

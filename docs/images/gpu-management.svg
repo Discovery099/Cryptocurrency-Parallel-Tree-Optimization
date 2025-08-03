@@ -1,0 +1,103 @@
+<svg width="800" height="500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0F172A"/>
+      <stop offset="100%" style="stop-color:#1E293B"/>
+    </linearGradient>
+    <linearGradient id="gpu" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7C3AED"/>
+      <stop offset="100%" style="stop-color:#5B21B6"/>
+    </linearGradient>
+  </defs>
+  
+  <rect width="800" height="500" fill="url(#bg2)"/>
+  
+  <!-- Header -->
+  <rect x="0" y="0" width="800" height="50" fill="#1F2937"/>
+  <text x="20" y="30" fill="white" font-family="Arial, sans-serif" font-size="16" font-weight="bold">🔧 GPU Management Interface</text>
+  
+  <!-- GPU Cards -->
+  <rect x="20" y="70" width="360" height="120" rx="8" fill="#374151"/>
+  <text x="30" y="95" fill="white" font-family="Arial, sans-serif" font-size="14" font-weight="bold">RTX 3090 #1</text>
+  <text x="30" y="115" fill="#10B981" font-family="Arial, sans-serif" font-size="12">8.7 TH/s • 86°C • 367W</text>
+  
+  <!-- Temperature gauge -->
+  <circle cx="320" cy="130" r="30" stroke="#1F2937" stroke-width="4" fill="none"/>
+  <circle cx="320" cy="130" r="30" stroke="#F59E0B" stroke-width="4" fill="none" 
+          stroke-dasharray="150" stroke-dashoffset="45" transform="rotate(-90 320 130)"/>
+  <text x="312" y="135" fill="white" font-family="Arial, sans-serif" font-size="12">86°C</text>
+  
+  <!-- Memory usage bar -->
+  <rect x="30" y="140" width="200" height="8" rx="4" fill="#1F2937"/>
+  <rect x="30" y="140" width="125" height="8" rx="4" fill="url(#gpu)"/>
+  <text x="30" y="160" fill="#9CA3AF" font-family="Arial, sans-serif" font-size="10">Memory: 12.5GB / 24.0GB</text>
+  
+  <!-- Power usage -->
+  <rect x="250" y="140" width="50" height="35" rx="4" fill="#1F2937"/>
+  <rect x="250" y="160" width="50" height="15" rx="2" fill="#EF4444"/>
+  <text x="255" y="185" fill="#9CA3AF" font-family="Arial, sans-serif" font-size="10">367W</text>
+  
+  <!-- Second GPU -->
+  <rect x="400" y="70" width="360" height="120" rx="8" fill="#374151"/>
+  <text x="410" y="95" fill="white" font-family="Arial, sans-serif" font-size="14" font-weight="bold">RTX 4080 Series</text>
+  <text x="410" y="115" fill="#10B981" font-family="Arial, sans-serif" font-size="12">23.0 TH/s • 65°C • 320W</text>
+  
+  <circle cx="700" cy="130" r="30" stroke="#1F2937" stroke-width="4" fill="none"/>
+  <circle cx="700" cy="130" r="30" stroke="#10B981" stroke-width="4" fill="none" 
+          stroke-dasharray="150" stroke-dashoffset="75" transform="rotate(-90 700 130)"/>
+  <text x="692" y="135" fill="white" font-family="Arial, sans-serif" font-size="12">65°C</text>
+  
+  <rect x="410" y="140" width="200" height="8" rx="4" fill="#1F2937"/>
+  <rect x="410" y="140" width="140" height="8" rx="4" fill="url(#gpu)"/>
+  <text x="410" y="160" fill="#9CA3AF" font-family="Arial, sans-serif" font-size="10">Memory: 11.8GB / 16.0GB</text>
+  
+  <!-- Third GPU -->
+  <rect x="20" y="210" width="360" height="120" rx="8" fill="#374151"/>
+  <text x="30" y="235" fill="white" font-family="Arial, sans-serif" font-size="14" font-weight="bold">RTX 4090 #1</text>
+  <text x="30" y="255" fill="#10B981" font-family="Arial, sans-serif" font-size="12">14.2 TH/s • 59°C • 311W</text>
+  <text x="30" y="275" fill="#F59E0B" font-family="Arial, sans-serif" font-size="10">⭐ Peak Performance</text>
+  
+  <circle cx="320" cy="270" r="30" stroke="#1F2937" stroke-width="4" fill="none"/>
+  <circle cx="320" cy="270" r="30" stroke="#10B981" stroke-width="4" fill="none" 
+          stroke-dasharray="150" stroke-dashoffset="90" transform="rotate(-90 320 270)"/>
+  <text x="312" y="275" fill="white" font-family="Arial, sans-serif" font-size="12">59°C</text>
+  
+  <rect x="30" y="290" width="200" height="8" rx="4" fill="#1F2937"/>
+  <rect x="30" y="290" width="165" height="8" rx="4" fill="url(#gpu)"/>
+  <text x="30" y="310" fill="#9CA3AF" font-family="Arial, sans-serif" font-size="10">Memory: 19.8GB / 24.0GB</text>
+  
+  <!-- System Overview -->
+  <rect x="400" y="210" width="360" height="120" rx="8" fill="#374151"/>
+  <text x="410" y="235" fill="white" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Fleet Overview</text>
+  
+  <text x="410" y="255" fill="#9CA3AF" font-family="Arial, sans-serif" font-size="12">Total Hash Rate:</text>
+  <text x="520" y="255" fill="white" font-family="Arial, sans-serif" font-size="12" font-weight="bold">65.6 TH/s</text>
+  
+  <text x="410" y="275" fill="#9CA3AF" font-family="Arial, sans-serif" font-size="12">Total Power:</text>
+  <text x="520" y="275" fill="white" font-family="Arial, sans-serif" font-size="12" font-weight="bold">1,831W</text>
+  
+  <text x="410" y="295" fill="#9CA3AF" font-family="Arial, sans-serif" font-size="12">Avg Temperature:</text>
+  <text x="520" y="295" fill="white" font-family="Arial, sans-serif" font-size="12" font-weight="bold">60°C</text>
+  
+  <text x="410" y="315" fill="#9CA3AF" font-family="Arial, sans-serif" font-size="12">Status:</text>
+  <circle cx="470" cy="312" r="4" fill="#10B981"/>
+  <text x="480" y="315" fill="#10B981" font-family="Arial, sans-serif" font-size="12">All Online</text>
+  
+  <!-- Performance Chart -->
+  <rect x="20" y="350" width="740" height="130" rx="8" fill="#374151"/>
+  <text x="30" y="375" fill="white" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Hash Rate Performance (24H)</text>
+  
+  <!-- Chart axes -->
+  <line x1="60" y1="400" x2="60" y2="460" stroke="#4B5563" stroke-width="1"/>
+  <line x1="60" y1="460" x2="740" y2="460" stroke="#4B5563" stroke-width="1"/>
+  
+  <!-- Chart data -->
+  <polyline points="60,450 120,440 180,435 240,445 300,430 360,425 420,430 480,425 540,420 600,415 660,410 720,405"
+            stroke="#10B981" stroke-width="3" fill="none"/>
+  
+  <!-- Chart labels -->
+  <text x="30" y="405" fill="#9CA3AF" font-family="Arial, sans-serif" font-size="10">70</text>
+  <text x="30" y="430" fill="#9CA3AF" font-family="Arial, sans-serif" font-size="10">65</text>
+  <text x="30" y="455" fill="#9CA3AF" font-family="Arial, sans-serif" font-size="10">60</text>
+  <text x="30" y="465" fill="#9CA3AF" font-family="Arial, sans-serif" font-size="10">TH/s</text>
+</svg>

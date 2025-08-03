@@ -1,0 +1,95 @@
+<svg width="800" height="500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0F172A"/>
+      <stop offset="100%" style="stop-color:#1E293B"/>
+    </linearGradient>
+    <linearGradient id="chart" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#10B981" stop-opacity="0.1"/>
+      <stop offset="100%" style="stop-color:#10B981" stop-opacity="0.8"/>
+    </linearGradient>
+  </defs>
+  
+  <rect width="800" height="500" fill="url(#bg4)"/>
+  
+  <!-- Header -->
+  <rect x="0" y="0" width="800" height="50" fill="#1F2937"/>
+  <text x="20" y="30" fill="white" font-family="Arial, sans-serif" font-size="16" font-weight="bold">📊 Performance Analytics</text>
+  
+  <!-- KPI Cards -->
+  <rect x="20" y="70" width="180" height="100" rx="8" fill="#374151"/>
+  <text x="30" y="95" fill="#9CA3AF" font-family="Arial, sans-serif" font-size="12">Peak Performance</text>
+  <text x="30" y="120" fill="white" font-family="Arial, sans-serif" font-size="20" font-weight="bold">358.2 TH/s</text>
+  <text x="30" y="140" fill="#10B981" font-family="Arial, sans-serif" font-size="12">🏆 Record High</text>
+  
+  <rect x="220" y="70" width="180" height="100" rx="8" fill="#374151"/>
+  <text x="230" y="95" fill="#9CA3AF" font-family="Arial, sans-serif" font-size="12">Average Hash Rate</text>
+  <text x="230" y="120" fill="white" font-family="Arial, sans-serif" font-size="20" font-weight="bold">342.5 TH/s</text>
+  <text x="230" y="140" fill="#10B981" font-family="Arial, sans-serif" font-size="12">+8.2% improvement</text>
+  
+  <rect x="420" y="70" width="180" height="100" rx="8" fill="#374151"/>
+  <text x="430" y="95" fill="#9CA3AF" font-family="Arial, sans-serif" font-size="12">Revenue Trend</text>
+  <text x="430" y="120" fill="white" font-family="Arial, sans-serif" font-size="20" font-weight="bold">$3.30</text>
+  <text x="430" y="140" fill="#10B981" font-family="Arial, sans-serif" font-size="12">Monthly total</text>
+  
+  <rect x="620" y="70" width="160" height="100" rx="8" fill="#374151"/>
+  <text x="630" y="95" fill="#9CA3AF" font-family="Arial, sans-serif" font-size="12">Efficiency</text>
+  <text x="630" y="120" fill="white" font-family="Arial, sans-serif" font-size="20" font-weight="bold">98.7%</text>
+  <text x="630" y="140" fill="#10B981" font-family="Arial, sans-serif" font-size="12">Uptime</text>
+  
+  <!-- Main Chart -->
+  <rect x="20" y="190" width="760" height="200" rx="8" fill="#374151"/>
+  <text x="30" y="215" fill="white" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Hash Rate History (7 Days)</text>
+  
+  <!-- Chart grid -->
+  <line x1="60" y1="230" x2="60" y2="370" stroke="#4B5563" stroke-width="1"/>
+  <line x1="60" y1="370" x2="760" y2="370" stroke="#4B5563" stroke-width="1"/>
+  
+  <!-- Grid lines -->
+  <line x1="60" y1="250" x2="760" y2="250" stroke="#374151" stroke-width="1"/>
+  <line x1="60" y1="290" x2="760" y2="290" stroke="#374151" stroke-width="1"/>
+  <line x1="60" y1="330" x2="760" y2="330" stroke="#374151" stroke-width="1"/>
+  
+  <!-- Chart area fill -->
+  <polygon points="60,360 160,340 260,320 360,300 460,285 560,275 660,260 760,250 760,370 60,370"
+           fill="url(#chart)"/>
+  
+  <!-- Chart line -->
+  <polyline points="60,360 160,340 260,320 360,300 460,285 560,275 660,260 760,250"
+            stroke="#10B981" stroke-width="3" fill="none"/>
+  
+  <!-- Data points -->
+  <circle cx="60" cy="360" r="4" fill="#10B981"/>
+  <circle cx="160" cy="340" r="4" fill="#10B981"/>
+  <circle cx="260" cy="320" r="4" fill="#10B981"/>
+  <circle cx="360" cy="300" r="4" fill="#10B981"/>
+  <circle cx="460" cy="285" r="4" fill="#10B981"/>
+  <circle cx="560" cy="275" r="4" fill="#10B981"/>
+  <circle cx="660" cy="260" r="4" fill="#10B981"/>
+  <circle cx="760" cy="250" r="4" fill="#F59E0B"/>
+  
+  <!-- Y-axis labels -->
+  <text x="45" y="255" fill="#9CA3AF" font-family="Arial, sans-serif" font-size="10">400</text>
+  <text x="45" y="295" fill="#9CA3AF" font-family="Arial, sans-serif" font-size="10">350</text>
+  <text x="45" y="335" fill="#9CA3AF" font-family="Arial, sans-serif" font-size="10">300</text>
+  <text x="45" y="375" fill="#9CA3AF" font-family="Arial, sans-serif" font-size="10">250</text>
+  
+  <!-- X-axis labels -->
+  <text x="55" y="385" fill="#9CA3AF" font-family="Arial, sans-serif" font-size="10">7d</text>
+  <text x="255" y="385" fill="#9CA3AF" font-family="Arial, sans-serif" font-size="10">3d</text>
+  <text x="455" y="385" fill="#9CA3AF" font-family="Arial, sans-serif" font-size="10">1d</text>
+  <text x="655" y="385" fill="#9CA3AF" font-family="Arial, sans-serif" font-size="10">12h</text>
+  <text x="745" y="385" fill="#9CA3AF" font-family="Arial, sans-serif" font-size="10">Now</text>
+  
+  <!-- Optimization Panel -->
+  <rect x="20" y="410" width="360" height="70" rx="8" fill="#374151"/>
+  <text x="30" y="435" fill="white" font-family="Arial, sans-serif" font-size="14" font-weight="bold">ML Optimization Status</text>
+  <text x="30" y="455" fill="#10B981" font-family="Arial, sans-serif" font-size="12">✓ PhaseNU Algorithm: 94.2% efficiency</text>
+  <text x="30" y="470" fill="#10B981" font-family="Arial, sans-serif" font-size="12">✓ Adaptive Restructuring: 91.8% active</text>
+  
+  <!-- Revenue Panel -->
+  <rect x="400" y="410" width="380" height="70" rx="8" fill="#374151"/>
+  <text x="410" y="435" fill="white" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Revenue Optimization</text>
+  <text x="410" y="455" fill="#9CA3AF" font-family="Arial, sans-serif" font-size="12">Daily: $0.11 • Weekly: $0.77 • Monthly: $3.30</text>
+  <text x="410" y="470" fill="#10B981" font-family="Arial, sans-serif" font-size="12">Profit margin optimized through intelligent pool switching</text>
+</svg>

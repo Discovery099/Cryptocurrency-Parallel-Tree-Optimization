@@ -1,0 +1,80 @@
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0F172A"/>
+      <stop offset="100%" style="stop-color:#1E293B"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10B981"/>
+      <stop offset="100%" style="stop-color:#059669"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="400" fill="url(#bg)"/>
+  
+  <!-- Header -->
+  <rect x="0" y="0" width="800" height="60" fill="#1F2937"/>
+  <text x="20" y="35" fill="white" font-family="Arial, sans-serif" font-size="18" font-weight="bold">🚀 CryptoTree Mining Dashboard</text>
+  <circle cx="750" cy="30" r="8" fill="#10B981"/>
+  <text x="720" y="35" fill="#10B981" font-family="Arial, sans-serif" font-size="12">LIVE</text>
+  
+  <!-- Main metrics grid -->
+  <rect x="20" y="80" width="180" height="120" rx="8" fill="#374151"/>
+  <text x="30" y="105" fill="#9CA3AF" font-family="Arial, sans-serif" font-size="12">Hash Rate</text>
+  <text x="30" y="130" fill="white" font-family="Arial, sans-serif" font-size="24" font-weight="bold">65.6 TH/s</text>
+  <text x="30" y="150" fill="#10B981" font-family="Arial, sans-serif" font-size="12">+8.2% ↗</text>
+  <rect x="30" y="160" width="160" height="4" rx="2" fill="#1F2937"/>
+  <rect x="30" y="160" width="120" height="4" rx="2" fill="url(#accent)"/>
+  
+  <rect x="220" y="80" width="180" height="120" rx="8" fill="#374151"/>
+  <text x="230" y="105" fill="#9CA3AF" font-family="Arial, sans-serif" font-size="12">System Uptime</text>
+  <text x="230" y="130" fill="white" font-family="Arial, sans-serif" font-size="24" font-weight="bold">98.7%</text>
+  <text x="230" y="150" fill="#10B981" font-family="Arial, sans-serif" font-size="12">Excellent</text>
+  <circle cx="370" cy="140" r="25" stroke="url(#accent)" stroke-width="3" fill="none"/>
+  <circle cx="370" cy="140" r="25" stroke="url(#accent)" stroke-width="3" fill="none" stroke-dasharray="144" stroke-dashoffset="17"/>
+  
+  <rect x="420" y="80" width="180" height="120" rx="8" fill="#374151"/>
+  <text x="430" y="105" fill="#9CA3AF" font-family="Arial, sans-serif" font-size="12">Cache Efficiency</text>
+  <text x="430" y="130" fill="white" font-family="Arial, sans-serif" font-size="24" font-weight="bold">96.2%</text>
+  <text x="430" y="150" fill="#10B981" font-family="Arial, sans-serif" font-size="12">Optimized</text>
+  
+  <rect x="620" y="80" width="160" height="120" rx="8" fill="#374151"/>
+  <text x="630" y="105" fill="#9CA3AF" font-family="Arial, sans-serif" font-size="12">Daily Revenue</text>
+  <text x="630" y="130" fill="white" font-family="Arial, sans-serif" font-size="24" font-weight="bold">$0.11</text>
+  <text x="630" y="150" fill="#10B981" font-family="Arial, sans-serif" font-size="12">Earning</text>
+  
+  <!-- GPU Status -->
+  <rect x="20" y="220" width="760" height="80" rx="8" fill="#374151"/>
+  <text x="30" y="245" fill="#9CA3AF" font-family="Arial, sans-serif" font-size="14">GPU Fleet Status</text>
+  
+  <!-- GPU bars -->
+  <rect x="30" y="255" width="100" height="15" rx="7" fill="#1F2937"/>
+  <rect x="30" y="255" width="75" height="15" rx="7" fill="url(#accent)"/>
+  <text x="30" y="285" fill="white" font-family="Arial, sans-serif" font-size="10">RTX 3090</text>
+  
+  <rect x="150" y="255" width="100" height="15" rx="7" fill="#1F2937"/>
+  <rect x="150" y="255" width="85" height="15" rx="7" fill="url(#accent)"/>
+  <text x="150" y="285" fill="white" font-family="Arial, sans-serif" font-size="10">RTX 4080</text>
+  
+  <rect x="270" y="255" width="100" height="15" rx="7" fill="#1F2937"/>
+  <rect x="270" y="255" width="90" height="15" rx="7" fill="url(#accent)"/>
+  <text x="270" y="285" fill="white" font-family="Arial, sans-serif" font-size="10">RTX 4090</text>
+  
+  <!-- Pool connections -->
+  <text x="450" y="265" fill="#9CA3AF" font-family="Arial, sans-serif" font-size="12">Mining Pools: 14/17 Connected</text>
+  <circle cx="720" cy="260" r="4" fill="#10B981"/>
+  <text x="650" y="280" fill="#10B981" font-family="Arial, sans-serif" font-size="10">Binance Pool Primary</text>
+  
+  <!-- Performance graph area -->
+  <rect x="20" y="320" width="760" height="60" rx="8" fill="#374151"/>
+  <text x="30" y="340" fill="#9CA3AF" font-family="Arial, sans-serif" font-size="12">Hash Rate Trend (24H)</text>
+  
+  <!-- Simple trend line -->
+  <polyline points="40,360 120,350 200,355 280,345 360,340 440,335 520,342 600,338 680,332 760,330"
+            stroke="url(#accent)" stroke-width="2" fill="none"/>
+  
+  <!-- Status indicators -->
+  <circle cx="50" cy="385" r="3" fill="#10B981"/>
+  <text x="60" y="390" fill="#10B981" font-family="Arial, sans-serif" font-size="10">All Systems Operational</text>
+</svg>
