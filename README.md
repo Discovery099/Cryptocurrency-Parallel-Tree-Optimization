@@ -22,6 +22,8 @@
 
 [🎮 **Live Demo**](https://964a6cd4-6b7e-433c-91bd-f2ce0a6c5b15-00-xilmrq4n3f4r.janeway.replit.dev) • [🚀 **Quick Start**](#quick-start) • [📚 **Documentation**](#api-documentation) • [🤝 **Contributing**](#contributing)
 
+> **🌟 Experience the live platform:** [https://964a6cd4-6b7e-433c-91bd-f2ce0a6c5b15-00-xilmrq4n3f4r.janeway.replit.dev](https://964a6cd4-6b7e-433c-91bd-f2ce0a6c5b15-00-xilmrq4n3f4r.janeway.replit.dev)
+
 ---
 
 **🔴 LIVE STATUS** | Hash Rate: **65.6 TH/s** | GPUs: **6 Total** | Pools: **17 Connected** | Uptime: **98.7%**
@@ -35,7 +37,7 @@
 ### 🎯 **Mining Dashboard**
 The main dashboard provides real-time monitoring of all mining operations with live performance metrics, system status indicators, and revenue tracking.
 
-![Mining Dashboard](./docs/images/dashboard.svg)
+![Mining Dashboard](./docs/images/dashboard-live.png)
 
 **Key Features:**
 - Real-time hash rate monitoring (current: 65.6 TH/s)
@@ -46,7 +48,7 @@ The main dashboard provides real-time monitoring of all mining operations with l
 ### 🧠 **Merkle Tree Optimization**
 Advanced parallel processing center showing real-time algorithm performance and memory utilization statistics.
 
-![Merkle Tree Optimization](./docs/images/analytics.svg)
+![Merkle Tree Optimization](./docs/images/merkle-tree-live.png)
 
 **Performance Metrics:**
 - **Cache Hit Rate**: 96.2% efficiency
@@ -59,7 +61,7 @@ Advanced parallel processing center showing real-time algorithm performance and 
 ### 🔧 **GPU Management Interface**
 Professional GPU monitoring system for RTX 30/40 series cards with real-time temperature, power, and performance tracking.
 
-![GPU Management](./docs/images/gpu-management.svg)
+![GPU Management](./docs/images/gpu-management-live.png)
 
 **Hardware Specifications:**
 - **RTX 3090 #1**: 8.7 TH/s, 86°C, 367W, 12.5GB/24.0GB (93% util)
@@ -72,7 +74,7 @@ Professional GPU monitoring system for RTX 30/40 series cards with real-time tem
 ### ⛏️ **Mining Pool Integration**
 Multi-pool management system with intelligent failover and performance optimization across 17 major mining pools.
 
-![Mining Pools](./docs/images/mining-pools.svg)
+![Mining Pools](./docs/images/mining-pools-live.png)
 
 **Pool Statistics:**
 - **Total Pools**: 17 configured, 14 actively connected
@@ -84,7 +86,7 @@ Multi-pool management system with intelligent failover and performance optimizat
 ### 📊 **Analytics Dashboard**
 Comprehensive performance analytics with historical data, trend analysis, and revenue optimization metrics.
 
-![Analytics Dashboard](./docs/images/analytics.svg)
+![Analytics Dashboard](./docs/images/analytics-live.png)
 
 **Performance Analytics:**
 - **Average Hash Rate**: 342.5 TH/s (+8.2% improvement over baseline)
@@ -92,6 +94,18 @@ Comprehensive performance analytics with historical data, trend analysis, and re
 - **System Uptime**: 98.7% (excellent reliability rating)
 - **Daily Revenue**: $0.11 estimated earnings with real-time tracking
 - **Efficiency Trends**: Interactive charts showing performance over 24H/7D/30D periods
+
+### 🤖 **AI-Powered Optimizations**
+Advanced machine learning algorithms continuously optimize mining performance with real-time adaptive adjustments.
+
+![AI Optimizations](./docs/images/ai-optimizations-live.png)
+
+**AI Features:**
+- **Adaptive Algorithm Selection**: ML-driven switching between PhaseNU and other optimization algorithms
+- **Predictive Performance Modeling**: Real-time analysis and optimization recommendations
+- **Dynamic Resource Allocation**: AI-powered GPU and memory management
+- **Intelligent Pool Selection**: Automated switching based on profitability and latency analysis
+- **Performance Prediction**: Machine learning models for revenue and efficiency forecasting
 
 ---
 
