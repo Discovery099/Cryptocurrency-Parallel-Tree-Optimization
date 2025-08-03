@@ -13,6 +13,7 @@ import Configuration from "@/pages/Configuration";
 import Security from "@/pages/Security";
 import AIOptimizations from "@/pages/AIOptimizations";
 import LandingPage from "@/pages/LandingPage";
+import ImagesPage from "@/pages/ImagesPage";
 import Sidebar from "@/components/layout/Sidebar";
 import Header from "@/components/layout/Header";
 import { WebSocketProvider } from "@/lib/websocket";
@@ -21,6 +22,7 @@ function Router() {
   return (
     <Switch>
       <Route path="/landing" component={LandingPage} />
+      <Route path="/images" component={ImagesPage} />
       <Route path="/" component={Dashboard} />
       <Route path="/dashboard" component={Dashboard} />
       <Route path="/merkle-trees" component={MerkleTrees} />

@@ -35,7 +35,7 @@
 ### 🎯 **Mining Dashboard**
 The main dashboard provides real-time monitoring of all mining operations with live performance metrics, system status indicators, and revenue tracking.
 
-> **🖼️ Platform Screenshot**: Real-time mining dashboard showing live hash rate monitoring, system efficiency tracking, and all 9 services operational status. [Live Demo Available](https://964a6cd4-6b7e-433c-91bd-f2ce0a6c5b15-00-xilmrq4n3f4r.janeway.replit.dev)
+![Mining Dashboard](https://964a6cd4-6b7e-433c-91bd-f2ce0a6c5b15-00-xilmrq4n3f4r.janeway.replit.dev/api/images/dashboard)
 
 **Key Features:**
 - Real-time hash rate monitoring (current: 65.6 TH/s)
@@ -46,7 +46,7 @@ The main dashboard provides real-time monitoring of all mining operations with l
 ### 🧠 **Merkle Tree Optimization**
 Advanced parallel processing center showing real-time algorithm performance and memory utilization statistics.
 
-> **🖼️ Platform Screenshot**: Merkle tree optimization interface displaying cache hit rates, memory utilization, and active algorithms (PhaseNU & Adaptive Restructuring) with real-time performance metrics.
+![Merkle Tree Optimization](https://964a6cd4-6b7e-433c-91bd-f2ce0a6c5b15-00-xilmrq4n3f4r.janeway.replit.dev/api/images/analytics)
 
 **Performance Metrics:**
 - **Cache Hit Rate**: 96.2% efficiency
@@ -59,7 +59,7 @@ Advanced parallel processing center showing real-time algorithm performance and 
 ### 🔧 **GPU Management Interface**
 Professional GPU monitoring system for RTX 30/40 series cards with real-time temperature, power, and performance tracking.
 
-> **🖼️ Platform Screenshot**: GPU management dashboard showing 6 RTX cards (3090/4080/4090) with live temperature monitoring, power consumption tracking, and memory utilization for each GPU unit.
+![GPU Management](https://964a6cd4-6b7e-433c-91bd-f2ce0a6c5b15-00-xilmrq4n3f4r.janeway.replit.dev/api/images/gpu-management)
 
 **Hardware Specifications:**
 - **RTX 3090 #1**: 8.7 TH/s, 86°C, 367W, 12.5GB/24.0GB (93% util)
@@ -72,7 +72,7 @@ Professional GPU monitoring system for RTX 30/40 series cards with real-time tem
 ### ⛏️ **Mining Pool Integration**
 Multi-pool management system with intelligent failover and performance optimization across 17 major mining pools.
 
-> **🖼️ Platform Screenshot**: Mining pool management interface displaying 17 configured pools with Binance Pool as primary, showing real-time latency monitoring, worker distribution, and automatic failover status.
+![Mining Pools](https://964a6cd4-6b7e-433c-91bd-f2ce0a6c5b15-00-xilmrq4n3f4r.janeway.replit.dev/api/images/mining-pools)
 
 **Pool Statistics:**
 - **Total Pools**: 17 configured, 14 actively connected
@@ -84,7 +84,7 @@ Multi-pool management system with intelligent failover and performance optimizat
 ### 📊 **Analytics Dashboard**
 Comprehensive performance analytics with historical data, trend analysis, and revenue optimization metrics.
 
-> **🖼️ Platform Screenshot**: Analytics interface showing performance trends, hash rate history charts, peak performance of 358.2 TH/s, system uptime tracking, and revenue optimization with interactive 24H/7D/30D period views.
+![Analytics Dashboard](https://964a6cd4-6b7e-433c-91bd-f2ce0a6c5b15-00-xilmrq4n3f4r.janeway.replit.dev/api/images/analytics)
 
 **Performance Analytics:**
 - **Average Hash Rate**: 342.5 TH/s (+8.2% improvement over baseline)

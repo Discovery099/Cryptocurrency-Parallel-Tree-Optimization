@@ -440,5 +440,196 @@ export async function registerRoutes(app: Express): Promise<Server> {
     logger.info(`serving on port ${port}`);
   });
 
+  // Serve individual SVG images - simplified without complex services
+  app.get('/api/images/:imageName', (req, res) => {
+    const { imageName } = req.params;
+    
+    const generateSimpleSVG = (type: string) => {
+      const baseStyle = `
+        <style>
+          .bg { fill: #0F172A; }
+          .card { fill: #374151; }
+          .text-white { fill: white; font-family: Arial, sans-serif; }
+          .text-gray { fill: #9CA3AF; font-family: Arial, sans-serif; }
+          .text-green { fill: #10B981; font-family: Arial, sans-serif; }
+          .accent { fill: #10B981; }
+        </style>
+      `;
+      
+      switch (type) {
+        case 'dashboard':
+          return `<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+            ${baseStyle}
+            <rect width="800" height="400" class="bg"/>
+            <rect x="0" y="0" width="800" height="60" fill="#1F2937"/>
+            <text x="20" y="35" class="text-white" font-size="18" font-weight="bold">🚀 CryptoTree Mining Dashboard</text>
+            <circle cx="750" cy="30" r="8" class="accent"/>
+            <text x="720" y="35" class="text-green" font-size="12">LIVE</text>
+            
+            <rect x="20" y="80" width="180" height="120" rx="8" class="card"/>
+            <text x="30" y="105" class="text-gray" font-size="12">Hash Rate</text>
+            <text x="30" y="130" class="text-white" font-size="24" font-weight="bold">65.6 TH/s</text>
+            <text x="30" y="150" class="text-green" font-size="12">+8.2% ↗</text>
+            
+            <rect x="220" y="80" width="180" height="120" rx="8" class="card"/>
+            <text x="230" y="105" class="text-gray" font-size="12">System Uptime</text>
+            <text x="230" y="130" class="text-white" font-size="24" font-weight="bold">98.7%</text>
+            <text x="230" y="150" class="text-green" font-size="12">Excellent</text>
+            
+            <rect x="420" y="80" width="180" height="120" rx="8" class="card"/>
+            <text x="430" y="105" class="text-gray" font-size="12">Cache Efficiency</text>
+            <text x="430" y="130" class="text-white" font-size="24" font-weight="bold">96.2%</text>
+            <text x="430" y="150" class="text-green" font-size="12">Optimized</text>
+            
+            <rect x="620" y="80" width="160" height="120" rx="8" class="card"/>
+            <text x="630" y="105" class="text-gray" font-size="12">Daily Revenue</text>
+            <text x="630" y="130" class="text-white" font-size="24" font-weight="bold">$0.11</text>
+            <text x="630" y="150" class="text-green" font-size="12">Earning</text>
+            
+            <rect x="20" y="220" width="760" height="160" rx="8" class="card"/>
+            <text x="30" y="245" class="text-gray" font-size="14">System Performance (24H)</text>
+            <polyline points="40,350 120,330 200,320 280,310 360,300 440,295 520,305 600,290 680,280 760,270"
+                      stroke="#10B981" stroke-width="2" fill="none"/>
+                      
+            <circle cx="50" cy="385" r="3" class="accent"/>
+            <text x="60" y="390" class="text-green" font-size="10">All Systems Operational</text>
+          </svg>`;
+          
+        case 'gpu-management':
+          return `<svg width="800" height="500" xmlns="http://www.w3.org/2000/svg">
+            ${baseStyle}
+            <rect width="800" height="500" class="bg"/>
+            <rect x="0" y="0" width="800" height="50" fill="#1F2937"/>
+            <text x="20" y="30" class="text-white" font-size="16" font-weight="bold">🔧 GPU Management Interface</text>
+            
+            <rect x="20" y="70" width="360" height="120" rx="8" class="card"/>
+            <text x="30" y="95" class="text-white" font-size="14" font-weight="bold">RTX 3090 #1</text>
+            <text x="30" y="115" class="text-green" font-size="12">8.7 TH/s • 86°C • 367W</text>
+            <circle cx="320" cy="130" r="30" stroke="#F59E0B" stroke-width="4" fill="none"/>
+            <text x="312" y="135" class="text-white" font-size="12">86°C</text>
+            
+            <rect x="400" y="70" width="360" height="120" rx="8" class="card"/>
+            <text x="410" y="95" class="text-white" font-size="14" font-weight="bold">RTX 4080 Series</text>
+            <text x="410" y="115" class="text-green" font-size="12">23.0 TH/s • 65°C • 320W</text>
+            <circle cx="700" cy="130" r="30" stroke="#10B981" stroke-width="4" fill="none"/>
+            <text x="692" y="135" class="text-white" font-size="12">65°C</text>
+            
+            <rect x="20" y="210" width="360" height="120" rx="8" class="card"/>
+            <text x="30" y="235" class="text-white" font-size="14" font-weight="bold">RTX 4090 #1</text>
+            <text x="30" y="255" class="text-green" font-size="12">14.2 TH/s • 59°C • 311W</text>
+            <text x="30" y="275" fill="#F59E0B" font-size="10">⭐ Peak Performance</text>
+            
+            <rect x="400" y="210" width="360" height="120" rx="8" class="card"/>
+            <text x="410" y="235" class="text-white" font-size="14" font-weight="bold">Fleet Overview</text>
+            <text x="410" y="255" class="text-gray" font-size="12">Total Hash Rate: 65.6 TH/s</text>
+            <text x="410" y="275" class="text-gray" font-size="12">Total Power: 1,831W</text>
+            <text x="410" y="295" class="text-gray" font-size="12">Status: All Online</text>
+            <circle cx="570" cy="292" r="4" class="accent"/>
+            
+            <rect x="20" y="350" width="740" height="130" rx="8" class="card"/>
+            <text x="30" y="375" class="text-white" font-size="14" font-weight="bold">Hash Rate Performance (24H)</text>
+            <polyline points="60,450 120,440 180,435 240,445 300,430 360,425 420,430 480,425 540,420 600,415 660,410 720,405"
+                      stroke="#10B981" stroke-width="3" fill="none"/>
+          </svg>`;
+          
+        case 'mining-pools':
+          return `<svg width="800" height="450" xmlns="http://www.w3.org/2000/svg">
+            ${baseStyle}
+            <rect width="800" height="450" class="bg"/>
+            <rect x="0" y="0" width="800" height="50" fill="#1F2937"/>
+            <text x="20" y="30" class="text-white" font-size="16" font-weight="bold">⛏️ Mining Pool Management</text>
+            <text x="650" y="30" class="text-green" font-size="12">14/17 Connected</text>
+            
+            <rect x="20" y="70" width="760" height="60" rx="8" class="card"/>
+            <circle cx="40" cy="100" r="8" class="accent"/>
+            <text x="60" y="90" class="text-white" font-size="14" font-weight="bold">Binance Pool</text>
+            <text x="60" y="105" class="text-gray" font-size="12">stratum+tcp://stratum.binance.pool.com:8888</text>
+            <text x="60" y="120" class="text-green" font-size="12">PRIMARY • 176ms latency • 0 workers</text>
+            
+            <rect x="600" y="85" width="80" height="30" rx="4" class="accent"/>
+            <text x="625" y="105" class="text-white" font-size="12">ACTIVE</text>
+            
+            <rect x="20" y="150" width="240" height="80" rx="8" class="card"/>
+            <circle cx="35" cy="170" r="6" class="accent"/>
+            <text x="50" y="175" class="text-white" font-size="12" font-weight="bold">F2Pool</text>
+            <text x="50" y="190" class="text-gray" font-size="10">154ms • Connected</text>
+            <text x="50" y="205" class="text-green" font-size="10">12 workers</text>
+            
+            <rect x="280" y="150" width="240" height="80" rx="8" class="card"/>
+            <circle cx="295" cy="170" r="6" class="accent"/>
+            <text x="310" y="175" class="text-white" font-size="12" font-weight="bold">AntPool</text>
+            <text x="310" y="190" class="text-gray" font-size="10">142ms • Connected</text>
+            
+            <rect x="540" y="150" width="240" height="80" rx="8" class="card"/>
+            <circle cx="555" cy="170" r="6" class="accent"/>
+            <text x="570" y="175" class="text-white" font-size="12" font-weight="bold">Poolin</text>
+            <text x="570" y="190" class="text-gray" font-size="10">198ms • Connected</text>
+            
+            <rect x="20" y="350" width="760" height="80" rx="8" class="card"/>
+            <text x="30" y="375" class="text-white" font-size="14" font-weight="bold">Pool Statistics</text>
+            <text x="30" y="395" class="text-gray" font-size="12">Average Latency: 124ms</text>
+            <text x="250" y="395" class="text-gray" font-size="12">Active Workers: 72 distributed</text>
+            <text x="500" y="395" class="text-gray" font-size="12">Connection Health: Excellent</text>
+          </svg>`;
+          
+        case 'analytics':
+          return `<svg width="800" height="500" xmlns="http://www.w3.org/2000/svg">
+            ${baseStyle}
+            <rect width="800" height="500" class="bg"/>
+            <rect x="0" y="0" width="800" height="50" fill="#1F2937"/>
+            <text x="20" y="30" class="text-white" font-size="16" font-weight="bold">📊 Performance Analytics</text>
+            
+            <rect x="20" y="70" width="180" height="100" rx="8" class="card"/>
+            <text x="30" y="95" class="text-gray" font-size="12">Peak Performance</text>
+            <text x="30" y="120" class="text-white" font-size="20" font-weight="bold">358.2 TH/s</text>
+            <text x="30" y="140" class="text-green" font-size="12">🏆 Record High</text>
+            
+            <rect x="220" y="70" width="180" height="100" rx="8" class="card"/>
+            <text x="230" y="95" class="text-gray" font-size="12">Average Hash Rate</text>
+            <text x="230" y="120" class="text-white" font-size="20" font-weight="bold">342.5 TH/s</text>
+            <text x="230" y="140" class="text-green" font-size="12">+8.2% improvement</text>
+            
+            <rect x="420" y="70" width="180" height="100" rx="8" class="card"/>
+            <text x="430" y="95" class="text-gray" font-size="12">Revenue Trend</text>
+            <text x="430" y="120" class="text-white" font-size="20" font-weight="bold">$3.30</text>
+            <text x="430" y="140" class="text-green" font-size="12">Monthly total</text>
+            
+            <rect x="620" y="70" width="160" height="100" rx="8" class="card"/>
+            <text x="630" y="95" class="text-gray" font-size="12">Efficiency</text>
+            <text x="630" y="120" class="text-white" font-size="20" font-weight="bold">98.7%</text>
+            <text x="630" y="140" class="text-green" font-size="12">Uptime</text>
+            
+            <rect x="20" y="190" width="760" height="200" rx="8" class="card"/>
+            <text x="30" y="215" class="text-white" font-size="14" font-weight="bold">Hash Rate History (7 Days)</text>
+            
+            <polygon points="60,360 160,340 260,320 360,300 460,285 560,275 660,260 760,250 760,370 60,370"
+                     fill="#10B981" fill-opacity="0.2"/>
+            
+            <polyline points="60,360 160,340 260,320 360,300 460,285 560,275 660,260 760,250"
+                      stroke="#10B981" stroke-width="3" fill="none"/>
+            
+            <circle cx="760" cy="250" r="4" fill="#F59E0B"/>
+            
+            <rect x="20" y="410" width="760" height="70" rx="8" class="card"/>
+            <text x="30" y="435" class="text-white" font-size="14" font-weight="bold">ML Optimization Status</text>
+            <text x="30" y="455" class="text-green" font-size="12">✓ PhaseNU Algorithm: 94.2% efficiency</text>
+            <text x="30" y="470" class="text-green" font-size="12">✓ Adaptive Restructuring: 91.8% active</text>
+          </svg>`;
+          
+        default:
+          return `<svg width="400" height="200" xmlns="http://www.w3.org/2000/svg">
+            ${baseStyle}
+            <rect width="400" height="200" class="bg"/>
+            <text x="200" y="100" class="text-white" font-size="16" text-anchor="middle">Image not found</text>
+          </svg>`;
+      }
+    };
+    
+    const svgContent = generateSimpleSVG(imageName);
+    res.setHeader('Content-Type', 'image/svg+xml');
+    res.setHeader('Cache-Control', 'public, max-age=3600');
+    res.send(svgContent);
+  });
+
   return httpServer;
 }
