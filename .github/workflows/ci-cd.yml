@@ -44,7 +44,7 @@ jobs:
       - name: Run type checking
         run: |
           if [ -f "tsconfig.json" ]; then
-            npx tsc --noEmit || true
+            npm run check || npx tsc --noEmit || true
           fi
           
       - name: Run linting
