@@ -127,47 +127,47 @@ export const alertRelations = relations(alerts, ({ one }) => ({
 }));
 
 // Insert schemas
-export const insertUserSchema = createInsertSchema(users).omit({
+export const insertUserSchema = createInsertSchema(users, {
   id: true,
   createdAt: true,
   updatedAt: true,
 });
 
-export const insertGPUSchema = createInsertSchema(gpus).omit({
+export const insertGPUSchema = createInsertSchema(gpus, {
   id: true,
   createdAt: true,
   lastSeen: true,
 });
 
-export const insertMiningPoolSchema = createInsertSchema(miningPools).omit({
+export const insertMiningPoolSchema = createInsertSchema(miningPools, {
   id: true,
   createdAt: true,
   updatedAt: true,
 });
 
-export const insertMerkleTreeConfigSchema = createInsertSchema(merkleTreeConfigs).omit({
+export const insertMerkleTreeConfigSchema = createInsertSchema(merkleTreeConfigs, {
   id: true,
   createdAt: true,
   updatedAt: true,
 });
 
-export const insertSystemMetricSchema = createInsertSchema(systemMetrics).omit({
+export const insertSystemMetricSchema = createInsertSchema(systemMetrics, {
   id: true,
   timestamp: true,
 });
 
-export const insertAlertSchema = createInsertSchema(alerts).omit({
+export const insertAlertSchema = createInsertSchema(alerts, {
   id: true,
   createdAt: true,
   resolvedAt: true,
 });
 
-export const insertTransactionBatchSchema = createInsertSchema(transactionBatches).omit({
+export const insertTransactionBatchSchema = createInsertSchema(transactionBatches, {
   id: true,
   createdAt: true,
 });
 
-export const insertSystemConfigSchema = createInsertSchema(systemConfigs).omit({
+export const insertSystemConfigSchema = createInsertSchema(systemConfigs, {
   id: true,
   updatedAt: true,
 });
