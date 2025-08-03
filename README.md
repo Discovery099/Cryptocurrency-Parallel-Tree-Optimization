@@ -35,7 +35,7 @@
 ### 🎯 **Mining Dashboard**
 The main dashboard provides real-time monitoring of all mining operations with live performance metrics, system status indicators, and revenue tracking.
 
-![Mining Dashboard](https://964a6cd4-6b7e-433c-91bd-f2ce0a6c5b15-00-xilmrq4n3f4r.janeway.replit.dev/api/images/dashboard)
+![Mining Dashboard](./docs/images/dashboard.svg)
 
 **Key Features:**
 - Real-time hash rate monitoring (current: 65.6 TH/s)
@@ -46,7 +46,7 @@ The main dashboard provides real-time monitoring of all mining operations with l
 ### 🧠 **Merkle Tree Optimization**
 Advanced parallel processing center showing real-time algorithm performance and memory utilization statistics.
 
-![Merkle Tree Optimization](https://964a6cd4-6b7e-433c-91bd-f2ce0a6c5b15-00-xilmrq4n3f4r.janeway.replit.dev/api/images/analytics)
+![Merkle Tree Optimization](./docs/images/analytics.svg)
 
 **Performance Metrics:**
 - **Cache Hit Rate**: 96.2% efficiency
@@ -59,7 +59,7 @@ Advanced parallel processing center showing real-time algorithm performance and 
 ### 🔧 **GPU Management Interface**
 Professional GPU monitoring system for RTX 30/40 series cards with real-time temperature, power, and performance tracking.
 
-![GPU Management](https://964a6cd4-6b7e-433c-91bd-f2ce0a6c5b15-00-xilmrq4n3f4r.janeway.replit.dev/api/images/gpu-management)
+![GPU Management](./docs/images/gpu-management.svg)
 
 **Hardware Specifications:**
 - **RTX 3090 #1**: 8.7 TH/s, 86°C, 367W, 12.5GB/24.0GB (93% util)
@@ -72,7 +72,7 @@ Professional GPU monitoring system for RTX 30/40 series cards with real-time tem
 ### ⛏️ **Mining Pool Integration**
 Multi-pool management system with intelligent failover and performance optimization across 17 major mining pools.
 
-![Mining Pools](https://964a6cd4-6b7e-433c-91bd-f2ce0a6c5b15-00-xilmrq4n3f4r.janeway.replit.dev/api/images/mining-pools)
+![Mining Pools](./docs/images/mining-pools.svg)
 
 **Pool Statistics:**
 - **Total Pools**: 17 configured, 14 actively connected
@@ -84,7 +84,7 @@ Multi-pool management system with intelligent failover and performance optimizat
 ### 📊 **Analytics Dashboard**
 Comprehensive performance analytics with historical data, trend analysis, and revenue optimization metrics.
 
-![Analytics Dashboard](https://964a6cd4-6b7e-433c-91bd-f2ce0a6c5b15-00-xilmrq4n3f4r.janeway.replit.dev/api/images/analytics)
+![Analytics Dashboard](./docs/images/analytics.svg)
 
 **Performance Analytics:**
 - **Average Hash Rate**: 342.5 TH/s (+8.2% improvement over baseline)
